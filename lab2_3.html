@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Визначення місяця за кількістю днів</title>
+</head>    
+<body>
+    <script>
+        "use strict";
+
+        let days = parseInt(prompt("Введіть кількість днів у місяці:"));
+
+        let monthName;
+
+        switch (days) {
+            case 28:
+                monthName = "лютий (не високосний рік)";
+                break;
+            case 29:
+                monthName = "лютий (високосний рік)";
+                break;
+            case 30:
+                monthName = "квітень, червень, вересень, листопад";
+                break;
+            case 31:
+                monthName = "січень, березень, травень, липень, серпень, жовтень, грудень";
+                break;
+            default:
+                monthName = null; // неправильне значення
+        }
+
+        if (monthName) {
+            document.write("Місяці з даною кількістю днів: " + days + " днями: " + monthName);
+        } else {
+            document.write("Помилка! Введено неправильну кількість днів");
+        }
+    </script>
+</body>
+</html>
