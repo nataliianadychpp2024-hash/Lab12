@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Надич Наталія ПП-23</title>
+</head>
+<body>
+<script>
+"use strict";
+
+let guess = Math.floor(Math.random() * 11); 
+let f = true; 
+let number;
+
+while (f) {
+    number = parseInt(prompt("Введіть число від 0 до 10"));
+    f = false; 
+
+    if (number === guess) {
+        alert("Перемога! Числа співпали!");
+    } else {
+        alert("Ви програли!\nВаше число: " + number + "\nПравильне число: " + guess);
+    }
+}
+</script>
+</body>
+</html>
