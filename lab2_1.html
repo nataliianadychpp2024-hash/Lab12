@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Вибір мови</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        const lang = "pl"; 
+        let languageName;
+
+        if (lang === "ua") {
+            languageName = "українська";
+        } else if (lang === "en") {
+            languageName = "англійська";
+        } else if (lang === "pl") {
+            languageName = "польська";
+        } else if (lang === "de") {
+            languageName = "німецька";
+        } else {
+            languageName = "невідома мова";
+        }
+
+        document.write("<h2>Обрана мова: " + languageName + "</h2>");
+    </script>
+</body>
+</html>
