@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Генерація кольорів</title>
+</head>    
+<body>
+    <script>
+        "use strict";
+
+        document.write("<p>Використання оператора циклу <b>FOR</b></p>");
+
+        const colors = ["червоний", "синій", "зелений", "жовтий", "фіолетовий"];
+        const targetColor = "зелений";
+
+        let generatedColor;
+        let attemptsFor = 0;
+
+        for (;;) { // нескінченний цикл, вихід через break
+            generatedColor = colors[Math.floor(Math.random() * colors.length)];
+            attemptsFor++;
+            document.write("Спроба " + attemptsFor + ": " + generatedColor + "<br>");
+            if (generatedColor === targetColor) break;
+        }
+
+        document.write("Знайдено колір <b>" + targetColor + "</b> після " + attemptsFor + " спроб<br>");
+
+        document.write("<p>Використання оператора циклу <b>WHILE</b></p>");
+
+        let attemptsWhile = 0;
+        do {
+            generatedColor = colors[Math.floor(Math.random() * colors.length)];
+            attemptsWhile++;
+            document.write("Спроба " + attemptsWhile + ": " + generatedColor + "<br>");
+        } while (generatedColor !== targetColor);
+
+        document.write("Знайдено колір <b>" + targetColor + "</b> після " + attemptsWhile + " спроб<br>");
+
+        document.write("<p>Використання оператора циклу <b>DO WHILE</b></p>");
+
+        let attemptsDoWhile = 0;
+        let colorDoWhile;
+        do {
+            colorDoWhile = colors[Math.floor(Math.random() * colors.length)];
+            attemptsDoWhile++;
+            document.write("Спроба " + attemptsDoWhile + ": " + colorDoWhile + "<br>");
+        } while (colorDoWhile !== targetColor);
+
+        document.write("Знайдено колір <b>" + targetColor + "</b> після " + attemptsDoWhile + " спроб<br>");
+    </script>
+</body>
+</html>
