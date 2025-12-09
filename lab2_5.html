@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Надич Наталія ПП-23</title>
+</head>	
+<body>
+	<script> 
+		"use strict";
+
+		let book = {
+			title: "Пригоди Шерлока Холмса",
+			author: "Артур К. Дойль",
+			pages: 365,
+			year: 2018
+		};
+
+		for (let propertyName in book) {
+			let info = propertyName + " — " + book[propertyName];
+			document.write(info + "<br>");
+		}
+	</script>
+</body>
+</html>
