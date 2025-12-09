@@ -13,8 +13,14 @@ let f = true;
 let number;
 
 while (f) {
+
     number = parseInt(prompt("Введіть число від 0 до 10"));
-    f = false; 
+
+    if (isNaN(number) || number < 0 || number > 10) {
+        alert("Помилка! Введіть число від 0 до 10.");
+        continue; 
+    }
+    f = false;
 
     if (number === guess) {
         alert("Перемога! Числа співпали!");
