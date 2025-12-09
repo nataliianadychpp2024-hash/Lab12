@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Надич Наталія ПП-23</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        const lang = prompt("Введіть код мови (ua, en, pl, de):", "ua");
+        let languageName;
+        if (lang === "ua") {
+            languageName = "українська";
+        } else if (lang === "en") {
+            languageName = "англійська";
+        } else if (lang === "pl") {
+            languageName = "польська";
+        } else if (lang === "de") {
+            languageName = "німецька";
+        } else {
+            languageName = "невідома";
+        }
+        alert("Обрана мова: " + languageName);
+    </script>
+</body>
+</html>
