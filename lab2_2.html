@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -7,20 +8,23 @@
     <script>
         "use strict";
 
-        document.write("<p style='text-align:center'>Знаходження слів однакової довжини</p>");
+        document.write("<p style='text-align:center'>Пошук найдовшого слова</p>");
 
         let word1 = "сонце";
         let word2 = "літо";
         let word3 = "день";
 
         const words = [word1, word2, word3];
+
         const maxLength = Math.max(word1.length, word2.length, word3.length);
         const longestWords = words.filter(word => word.length === maxLength);
 
-        if (longestWords.length >= 2) {
-            document.write("<p>Слова однакової максимальної довжини: " + longestWords.join(", ") + "</p>");
-        } else {
-            document.write("<p>Немає слів з однаковою максимальною довжиною</p>");
+        document.write("<p>Найдовше слово: <b>" + longestWords[0] + "</b></p>");
+
+        if (longestWords.length === 2) {
+            document.write("<p>Два слова мають однакову довжину: " + longestWords.join(", ") + "</p>");
+        } else if (longestWords.length === 3) {
+            document.write("<p>Усі три слова мають однакову довжину: " + longestWords.join(", ") + "</p>");
         }
     </script>
 </body>
